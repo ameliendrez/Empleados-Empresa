@@ -1,6 +1,7 @@
 <h4>Agregar Empleado</h4>
 
 <form id="form-employee" action="" method="post">
+<input type="number" name="idCompany" value="{$idCompany}" hidden/>
         
 <div class="container">
     <div class="row">
@@ -19,7 +20,7 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="age">Edad</label>
-                <input type="number" step="1" id="age" name="age" class="form-control" placeholder="27">
+                <input type="number" step="1" min="1" id="age" name="age" class="form-control" placeholder="27">
             </div>
         </div>
     </div>
@@ -27,35 +28,46 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label for="type-employee">Tipo Empleado</label>
-                <select name="type-employee" id="typeEmployee" class="form-control">
+                <select name="typeEmployee" id="type-employee" class="form-control">
                     <option></option>
-                    <option value="1">Desarrollador</option>
-                    <option value="2">Diseñador</option>
-                    <!-- {foreach from=$canchas item=cancha}
-                        <option value={$cancha->getId()} > {$cancha->getNombre()}</option>
-                    {/foreach} -->
+                    {foreach from=$typesEmployees item=typeEmployee}
+                        <option value={$typeEmployee->getId()} > {$typeEmployee->getName()}</option>
+                    {/foreach}        
                 </select>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="type-speciality">Tipo Especialidad</label>
-                <select name="type-speciality" id="typeSpeciality" class="form-control" disabled>
-                    <option></option>
-                    <option value="1">PHP</option>
-                    <option value="2">NET</option>
-                    <option value="2">Phyton</option>
-                    <!-- {foreach from=$canchas item=cancha}
-                        <option value={$cancha->getId()} > {$cancha->getNombre()}</option>
-                    {/foreach} -->
-                </select>
+                <div id="type-design-selector" class="hidden">
+                    <label for="type-design">Tipo Especialidad</label>
+                    <select name="typeDesign" id="type-design" class="form-control" disabled>
+                        <option></option>
+                        {foreach from=$typesDesign item=typeDesign}
+                            <option value={$typeDesign->getId()} > {$typeDesign->getName()}</option>
+                        {/foreach}
+                    </select>
+                </div>
+                <div id="type-language-selector">
+                    <label for="type-language">Tipo Especialidad</label>
+                    <select name="typeLanguage" id="type-language" class="form-control" disabled>
+                        <option></option>
+                        {foreach from=$typesLanguages item=typeLanguages}
+                            <option value={$typeLanguages->getId()} > {$typeLanguages->getName()}</option>
+                        {/foreach}                
+                    </select>
+                </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-6">
             <button id="add-employee" type="button" class="btn btn-success btn-round">Guardar</button>
             <button id="clean-form" type="button" class="btn btn-secondary btn-round">Limpiar</button>
+        </div>
+        <div class="col-6">
+            <div id="msj-error" class="alert alert-danger hidden" role="alert">
+                Datos Incompletos
+            </div>
         </div>
     </div>
 </form>

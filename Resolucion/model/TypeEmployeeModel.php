@@ -24,7 +24,7 @@
         "SELECT te.id, te.name FROM type_employee te WHERE te.id = ?" 
       );
       $sentencia->execute([$id]);
-      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+      return $sentencia->fetch(PDO::FETCH_ASSOC);
     }
     
 }

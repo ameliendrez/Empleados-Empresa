@@ -19,7 +19,7 @@
     }
 
     public function getTypeEmployeeById($id){
-      $typeEmployeeData = $this->model->getTypesEmployeeById($id);
+      $typeEmployeeData = $this->model->getTypeEmployeeById($id);
       return $this->formatDataFromModel($typeEmployeeData);
     }
 

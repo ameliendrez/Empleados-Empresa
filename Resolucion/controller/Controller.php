@@ -12,19 +12,9 @@
     protected $view;
     protected $model;
 
-    protected $typeLanguageController;
-    protected $typeDesignController;
-    protected $typeEmployeeController;
-    protected $employeeController;
-    protected $companyController;
-
     function __construct()
     {
-      $this->typeLanguageController = new TypeLanguageController();
-      $this->typeDesignController = new TypeDesignController();
-      $this->typeEmployeeController = new TypeEmployeeController();
-      $this->employeeController = new EmployeeController();
-      $this->companyController = new CompanyController();
+      
     }
   }
 

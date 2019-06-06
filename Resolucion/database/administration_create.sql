@@ -9,7 +9,7 @@ CREATE TABLE company (
     CONSTRAINT company_pk PRIMARY KEY (id)
 );
 
-INSERT INTO `company` (`id`, `name`) VALUES (1, 'Summa Solutions');
+INSERT INTO `company` (`id`, `name`) VALUES (1, 'Summa Solution');
 
 -- Table: company_employee
 CREATE TABLE company_employee (

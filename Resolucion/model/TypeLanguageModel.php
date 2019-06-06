@@ -24,7 +24,7 @@
         "SELECT tl.id, tl.name FROM type_language tl WHERE tl.id = ?" 
       );
       $sentencia->execute([$id]);
-      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+      return $sentencia->fetch(PDO::FETCH_ASSOC);
     }
     
 }

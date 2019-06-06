@@ -17,6 +17,15 @@
       $sentencia->execute([$id]);
       return $sentencia->fetch(PDO::FETCH_ASSOC);
     }
+
+    function addEmployee($idEmployee, $idCompany)
+    {
+      $sentencia = $this->db->prepare(
+        "INSERT INTO  company_employee (id_employee, id_company)
+        VALUES (?, ?)" 
+      );
+      $sentencia->execute([$idEmployee, $idCompany]);
+    }
     
 }
 

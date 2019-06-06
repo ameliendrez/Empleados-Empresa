@@ -3,23 +3,23 @@
   class TypeDesignController extends Controller{
         
     function __construct(){ 
-        $this->model = new TypeDesignModel();
+      $this->model = new TypeDesignModel();
     }
 
     public function getTypesDesign()
     {
       $listTypeDesignData = $this->model->getTypesDesign();
-      $typesDesigner = [];
+      $typesDesign = [];
       foreach ($listTypeDesignData as $designer) {
           $typeDesign = $this->formatDataFromModel($designer);
-          $typesDesigner[] = $typeDesign;
+          $typesDesign[] = $typeDesign;
       }
 
-      return $typesDesigner;
+      return $typesDesign;
     }
 
     public function getTypeDesignById($id){
-      $typeDesignData = $this->model->getTypesDesignById($id);
+      $typeDesignData = $this->model->getTypeDesignById($id);
       return $this->formatDataFromModel($typeDesignData);
     }
 

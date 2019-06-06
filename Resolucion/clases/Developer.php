@@ -1,19 +1,17 @@
 <?php
     class Developer extends Employee{
-        protected $typeLanguage;
-
         function __construct() {  
             parent::__construct();
         }
 
-        public function getTypeLanguage()
+        public function getSpeciality()
         {
-            return $this->typeLanguage;
+            return $this->speciality;
         }
 
-        public function setTypeLanguage($typeLanguage)
+        public function setSpeciality($typeLanguage)
         {
-            $this->typeLanguage = $typeLanguage;
+            $this->speciality = $typeLanguage;
         }
     }
 ?>

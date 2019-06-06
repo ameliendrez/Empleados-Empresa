@@ -1,19 +1,17 @@
 <?php
     class Designer extends Employee{
-        protected $typeDesign;
-
         function __construct() {  
             parent::__construct();
         }
 
-        public function getTypeDesign()
+        public function getSpecility()
         {
-            return $this->typeDesign;
+            return $this->speciality;
         }
 
-        public function setTypeDesign($typeDesign)
+        public function setSpeciality($typeDesign)
         {
-            $this->typeDesign = $typeDesign;
+            $this->speciality = $typeDesign;
         }
     }
 ?>

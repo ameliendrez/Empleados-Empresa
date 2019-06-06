@@ -9,10 +9,10 @@
 
   // ----------------- ADMINISTRATION CONTROLLER -------------------------// 
   $router->AddRoute("", "GET", "AdministrationController", "getIndex");
-  $router->AddRoute("employees", "GET", "AdministrationController", "getEmployees");
-  $router->AddRoute("employee/:id", "GET", "AdministrationController", "getEmployee");
+  $router->AddRoute("get-employee-by-id", "POST", "AdministrationController", "getEmployeeById");
   $router->AddRoute("add-employee", "POST", "AdministrationController", "addEmployee");
-  $router->AddRoute("avg-age-employee", "POST", "AdministrationController", "getAvgAgeEmployees");
+  
+
 
   // ------------- HANDLER ROUTE ------------------//  
   $route = $_GET['action'];

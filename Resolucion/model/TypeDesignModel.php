@@ -12,19 +12,19 @@
     function getTypesDesign()
     {
       $sentencia = $this->db->prepare(
-        "SELECT td.id, td.name FROM type_designer td" 
+        "SELECT td.id, td.name FROM type_design td" 
       );
       $sentencia->execute();
       return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    function getTypeEmployeeById($id)
+    function getTypeDesignById($id)
     {
       $sentencia = $this->db->prepare(
-        "SELECT td.id, td.name FROM type_designer td WHERE td.id = ?" 
+        "SELECT td.id, td.name FROM type_design td WHERE td.id = ?" 
       );
       $sentencia->execute([$id]);
-      return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+      return $sentencia->fetch(PDO::FETCH_ASSOC);
     }
 }
 

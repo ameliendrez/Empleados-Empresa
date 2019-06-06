@@ -18,14 +18,14 @@
     }
 
     public function getTypeLanguageById($id){
-      $typeLanguageData = $this->model->getTypesLanguageById($id);
+      $typeLanguageData = $this->model->getTypeLanguageById($id);
       return $this->formatDataFromModel($typeLanguageData);
     }
 
     private function formatDataFromModel($type){
       $typeLanguage = new TypeLanguage();
-      $type->setId($type["id"]);
-      $type->setName($type["name"]);
+      $typeLanguage->setId($type["id"]);
+      $typeLanguage->setName($type["name"]);
       return $typeLanguage;
     }   
   }
