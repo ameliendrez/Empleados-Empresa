@@ -15,9 +15,9 @@
     $design = TypeEmployee::DESIGNER;
 
     // Tipo de lenguaje
-    $php = TypeLanguages::PHP;
-    $net = TypeLanguages::NET;
-    $phy = TypeLanguages::PHYTON;
+    $php = TypeLanguage::PHP;
+    $net = TypeLanguage::NET;
+    $phy = TypeLanguage::PHYTON;
 
     // Tipo de diseño
     $web = TypeDesign::WEB;

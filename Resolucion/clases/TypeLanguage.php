@@ -1,5 +1,5 @@
 <?php
-    class TypeDesign {
+    class TypeLanguage {
         private $id;
         private $name;
 
